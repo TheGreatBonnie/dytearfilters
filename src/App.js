@@ -16,18 +16,15 @@ import './App.css';
 export default function App() {
   const [meeting, initMeeting] = useDyteClient();
 
-  const DYTE_KEY = process.env.REACT_APP_DYTE_KEY;
-  const DEEPAR_KEY = process.env.REACT_APP_DEEPAR_KEY;
-
   useEffect(() => {
     initMeeting({
-      authToken: DYTE_KEY,
+      authToken: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdJZCI6ImRkZjU3YzBmLTFkM2UtNDdmZS1iNmE1LWEwNmM3NDIwMTVhMCIsIm1lZXRpbmdJZCI6ImJiYmJmZTNlLWEyYjYtNGMzNy05ZTIzLWNmYzkzMWM1Y2E3OSIsInBhcnRpY2lwYW50SWQiOiJhYWFlNWY5Mi1mZmYwLTQ2MzItOTdiNy0xOWQ2ZDVmOTE1NTgiLCJwcmVzZXRJZCI6IjM4NzI3NWEwLTBmZTgtNDAyOC05ZDkwLTNhNWYxOTc1M2ZiZCIsImlhdCI6MTY4MDY0MzIwMSwiZXhwIjoxNjg5MjgzMjAxfQ.mmspLJ64kpmKnJGLKKQmQsYBV1r0PdjKRwwUM0UgirkODlqPp2hDb3Ip3MHf7Uy_OdUqeaxbBAwiUzHJZvJ54M2i9RrGqCdaWploG1BbKUiM_A0SHC7OjmO_rrU9M529gAaQla7o9HWP-EBFQfLybO_5Ml6Y9oAcj6P4p-CZtKHnUGynyeV8UKzrR0tIouIDNzoiaEXrkVEz4ryL9BhklZ4Y3CQ701PC-PREF_MrcXSNjep934aXGD-sZ706T5GaW9N21IrslFqSdq8rasJ4CJsClQsaPMpqf6uToV-V2H1EM9Q0hN_WinNc6P_1H3jq5WBBqxGwrruvwGGGqxvhrg',
       defaults: {
         audio: false,
         video: false,
       },
     });
-  }, [DYTE_KEY, initMeeting]);
+  }, [initMeeting]);
 
   async function RetroTheme() {
     let lastProcessedImage  = null;
@@ -42,7 +39,7 @@ export default function App() {
 
     // eslint-disable-next-line no-undef
     const deepAR = await deepar.initialize({
-        licenseKey: DEEPAR_KEY,
+        licenseKey: '65dbfab62ee7614ffe9a9bff3b2ffb06ede0bf8f90c6bea28f9a757ce0d17a8d0f83e81239a23b32',
         canvas: deepARCanvas,
         effect: 'https://cdn.jsdelivr.net/npm/deepar/effects/aviators',
         additionalOptions: {

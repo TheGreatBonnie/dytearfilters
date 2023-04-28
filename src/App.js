@@ -39,7 +39,7 @@ export default function App() {
 
     // eslint-disable-next-line no-undef
     const deepAR = await deepar.initialize({
-        licenseKey: '65dbfab62ee7614ffe9a9bff3b2ffb06ede0bf8f90c6bea28f9a757ce0d17a8d0f83e81239a23b32',
+        licenseKey: 'cfe8c995cf58103fea634172b30c6ab70ab94fb2b9c7104b748946906ee8f7b41164886170cc00f7',
         canvas: deepARCanvas,
         effect: 'https://cdn.jsdelivr.net/npm/deepar/effects/aviators',
         additionalOptions: {

@@ -1,0 +1,31 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+ }
+ 
+ .grid-container {
+   display: flex;
+   flex-direction: row;
+   flex-grow: 1;
+ }
+ 
+ .controlbar {
+   height: fit-content;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .dyte-meeting {
+   display: flex;
+   height: 100vh;
+   width: 100vw;
+   background: black;
+   flex-direction: column;
+ }
+ 
+ .active-button {
+   color: red;
+ }
